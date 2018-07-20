@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+                android:id="@+id/nav_lineup"
+                android:icon="@mipmap/ic_quaver"
+                android:title="Line-Up"/>
+        <item
+                android:id="@+id/nav_foodtruck"
+                android:icon="@mipmap/ic_hamburger"
+                android:title="FoodTrucks"/>
+        <item
+                android:id="@+id/nav_turismo"
+                android:icon="@mipmap/ic_landscape"
+                android:title="Turismo"/>
+        <item
+                android:id="@+id/nav_passeio"
+                android:icon="@mipmap/ic_bike"
+                android:title="Passeios"/>
+        <item
+                android:id="@+id/nav_servicos"
+                android:icon="@mipmap/ic_shop"
+                android:title="Serviços"/>
+    </group>
+
+</menu>
