@@ -6,12 +6,18 @@ public class LineUp {
 
   private String time;
 
-  private Band band;
+  private String band;
 
-  public LineUp(int id, String time, Band band) {
+  private String description;
+
+  private String imgUrl;
+
+  public LineUp(int id, String time, String band, String description, String imgUrl) {
     this.id = id;
     this.time = time;
     this.band = band;
+    this.description = description;
+    this.imgUrl = imgUrl;
   }
 
   public int getId() {
@@ -30,11 +36,27 @@ public class LineUp {
     this.time = time;
   }
 
-  public Band getBand() {
+  public String getBand() {
     return band;
   }
 
-  public void setBand(Band band) {
+  public void setBand(String band) {
     this.band = band;
+  }
+
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public String getImgUrl() {
+    return imgUrl;
+  }
+
+  public void setImgUrl(String imgUrl) {
+    this.imgUrl = imgUrl;
   }
 }

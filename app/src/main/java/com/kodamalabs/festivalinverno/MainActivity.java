@@ -2,22 +2,27 @@ package com.kodamalabs.festivalinverno;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.os.Parcelable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ImageView;
-import com.kodamalabs.festivalinverno.fragments.LineUpMenuFragment;
-import com.squareup.picasso.Picasso;
+
+import com.kodamalabs.festivalinverno.fragments.CategoryFragment;
+import com.kodamalabs.festivalinverno.fragments.FoodTruckFragment;
+import com.kodamalabs.festivalinverno.fragments.LineUpFragment;
+import com.kodamalabs.festivalinverno.fragments.SighteeingFragment;
+import com.kodamalabs.festivalinverno.fragments.TurismFragment;
+import com.kodamalabs.festivalinverno.mappers.FoodTruckMapper;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
     implements NavigationView.OnNavigationItemSelectedListener {
@@ -80,15 +85,15 @@ public class MainActivity extends AppCompatActivity
     Fragment fragment = null;
 
     if (id == R.id.nav_lineup) {
-      fragment = new LineUpMenuFragment();
+      fragment = LineUpFragment.newInstance();
     } else if (id == R.id.nav_foodtruck) {
-
+      fragment = FoodTruckFragment.newInstance();
     } else if (id == R.id.nav_turismo) {
-
+      fragment = SighteeingFragment.newInstance();
     }else if (id == R.id.nav_passeio) {
-
-    }else if (id == R.id.nav_turismo) {
-
+      fragment = TurismFragment.newInstance();
+    }else if (id == R.id.nav_servicos) {
+      fragment = CategoryFragment.newInstance();
     }
 
     if(fragment != null){

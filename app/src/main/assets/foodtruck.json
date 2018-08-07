@@ -1,0 +1,16 @@
+[{
+		"name": "Sao Camilo Massas",
+		"description": "Lasagna, nhoque,capeletti em geral",
+		"imageUrl": "https://i.imgur.com/h9UlbL9.png"
+	}, {
+		"name": "Insanna",
+		"description": "Hamburger foda, rustico, batatas nervosas",
+		"imageUrl": "https://i.imgur.com/dtx8hkV.jpg"
+	},
+	{
+		"name": "Atletica Food",
+		"description": "Comida fit, light para focar na dieta",
+		"imageUrl": "https://i.imgur.com/tLIxgsN.jpg"
+	}
+
+]

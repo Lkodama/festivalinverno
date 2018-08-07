@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CATEGORIAS"
+            android:background="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:textAlignment="center"
+            android:padding="15dp"/>
+
+        <Button
+            android:id="@+id/btn_compras"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:text="Compras"
+            android:background="@color/colorAccent"
+            android:textColor="#FFFFFF"/>
+        <Button
+            android:id="@+id/btn_restaurante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:text="Restaurantes"
+            android:background="#03A9F4"
+            android:textColor="#FFFFFF"/>
+        <Button
+            android:id="@+id/btn_pousada"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:text="Pousadas"
+            android:background="#CDDC39"
+            android:textColor="#FFFFFF"/>
+        <Button
+            android:id="@+id/btn_saude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:text="Saúde"
+            android:background="#FF5722"
+            android:textColor="#FFFFFF"/>
+        <Button
+            android:id="@+id/btn_servico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:text="Serviços"
+            android:background="#4CAF50"
+            android:textColor="#FFFFFF"/>
+
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

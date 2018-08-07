@@ -1,0 +1,22 @@
+[{
+  "name": "Cachoeira Pinhal Grande",
+  "description": "Queda dagua maravilhosa",
+  "latitude": "-22.7446638",
+  "longitude": "-46.373066",
+  "listImagesUrl": ["https://i.imgur.com/7Dth8Ct.jpg", "https://i.imgur.com/HmUcUQB.jpg"]
+}, {
+  "name": "Cachoeira dos Pretos",
+  "description": "Queda dagua maravilhosa",
+  "latitude": "-22.7446638",
+  "longitude": "-46.373066",
+  "listImagesUrl": ["https://i.imgur.com/7Dth8Ct.jpg", "https://i.imgur.com/HmUcUQB.jpg"]
+},
+  {
+    "name": "Cachoeira do Tamandua",
+    "description": "Corgo razo",
+    "latitude": "-22.7446638",
+    "longitude": "-46.373066",
+    "listImagesUrl": ["https://i.imgur.com/7Dth8Ct.jpg", "https://i.imgur.com/HmUcUQB.jpg"]
+  }
+
+]

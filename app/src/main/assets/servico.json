@@ -1,0 +1,25 @@
+[{
+  "name": "Safra Forte",
+  "description": "Consultoria e Planejamento Agropecuário",
+  "address": "Rua São Paulo,178",
+  "latitude": "-22.7446638",
+  "longitude": "-46.373066",
+  "imageUrl": "https://i.imgur.com/fOFuHUT.png"
+}, {
+  "name": "Agroramos",
+  "description": "Loja Agrícola bla bla bla",
+  "address": "Rua Benjamin Macedo,63",
+  "latitude": "-22.7426709",
+  "longitude": "-46.3709803",
+  "imageUrl": "https://i.imgur.com/2oviq6g.jpg"
+},
+  {
+    "name": "Atletica Food",
+    "description": "Comida fit, light para focar na dieta",
+    "address": "Rua Benjamin Macedo,63",
+    "latitude": "-22.7426709",
+    "longitude": "-46.3709803",
+    "imageUrl": "https://i.imgur.com/tLIxgsN.jpg"
+  }
+
+]
