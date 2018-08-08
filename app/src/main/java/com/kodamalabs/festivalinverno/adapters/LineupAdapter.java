@@ -17,13 +17,13 @@ public class LineupAdapter extends RecyclerView.Adapter<LineupAdapter.ViewHolder
 
     private List<LineUp> lineUpList;
 
-    private ServiceAdapter.OnItemClickListener listener;
+    private OnItemClickListener listener;
 
     public interface OnItemClickListener {
         void onItemClick(View itemView, int position);
     }
 
-    public void setOnItemClickListener(ServiceAdapter.OnItemClickListener listener) {
+    public void setOnItemClickListener(OnItemClickListener listener) {
         this.listener = listener;
     }
 

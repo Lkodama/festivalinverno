@@ -19,7 +19,7 @@ public class LineupMapper {
     public static List<LineUp> getLineUpList(Activity activity, String filename) throws JSONException {
 
         lineUpList = new ArrayList<>();
-        String json = JsonConverter.loadJSONFromAsset(activity, "foodtruck.json");
+        String json = JsonConverter.loadJSONFromAsset(activity, filename);
         JSONArray array = new JSONArray(json);
         for (int i = 0; i < array.length(); i++){
             JSONObject jsonObject = array.getJSONObject(i);

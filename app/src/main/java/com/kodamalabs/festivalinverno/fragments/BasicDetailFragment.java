@@ -37,7 +37,7 @@ public class BasicDetailFragment extends Fragment {
         ImageView imageView = (ImageView) rootView.findViewById(R.id.imageUrl);
         progressBar = new ProgressBar(getContext());
         progressBar.setVisibility(View.VISIBLE);
-        Picasso.with(getContext()).load(imageUrl).into(imageView, new com.squareup.picasso.Callback(){
+        Picasso.with(getContext()).load(imageUrl).centerCrop().resize(500,500).into(imageView, new com.squareup.picasso.Callback(){
             @Override
             public void onSuccess() {
                 if (progressBar != null) {

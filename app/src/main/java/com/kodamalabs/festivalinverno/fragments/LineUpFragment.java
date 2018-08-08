@@ -46,7 +46,7 @@ public class LineUpFragment extends Fragment {
     btnArrow.setOnClickListener(onClickListener());
 
     try{
-      listLineUpList = LineupMapper.getLineUpList(getActivity(),"linep1.json");
+      listLineUpList = LineupMapper.getLineUpList(getActivity(),"lineup1.json");
     }catch (Exception ex){
       Log.e("Lineup",ex.getMessage());
       listLineUpList = new ArrayList<>();
@@ -59,14 +59,15 @@ public class LineUpFragment extends Fragment {
     lista.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL));
     lista.setItemAnimator(new DefaultItemAnimator());
 
-    /*adapter.setOnItemClickListener(new FoodTruckAdapter.OnItemClickListener() {
+
+    adapter.setOnItemClickListener(new LineupAdapter.OnItemClickListener() {
       @Override
       public void onItemClick(View view, int position) {
-        FoodTruck foodTruck = foodTruckList.get(position);
+        LineUp lineUp = listLineUpList.get(position);
         Bundle bundle = new Bundle();
-        bundle.putString("name", foodTruck.getName());
-        bundle.putString("description", foodTruck.getDescription());
-        bundle.putString("imageUrl", foodTruck.getImageUrl());
+        bundle.putString("name", lineUp.getBand());
+        bundle.putString("description", lineUp.getDescription());
+        bundle.putString("imageUrl", lineUp.getImgUrl());
 
         Fragment basicDetailFragment = BasicDetailFragment.newInstance();
         basicDetailFragment.setArguments(bundle);
@@ -75,7 +76,7 @@ public class LineUpFragment extends Fragment {
                 .addToBackStack(null)
                 .commit();
       }
-    });*/
+    });
 
     return rootView;
   }
@@ -84,7 +85,11 @@ public class LineUpFragment extends Fragment {
     return new View.OnClickListener() {
       @Override
       public void onClick(View view) {
-
+        Fragment fragment = DayTwoFragment.newInstance();
+        getActivity().getSupportFragmentManager().beginTransaction()
+                .replace(R.id.container, fragment,"DayTwoFragment")
+                .addToBackStack(null)
+                .commit();
       }
     };
   }

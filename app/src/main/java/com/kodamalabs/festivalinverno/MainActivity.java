@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity
 
     NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
     navigationView.setNavigationItemSelectedListener(this);
+    refreshScreen(LineUpFragment.newInstance());
 
   }
 
@@ -86,14 +87,19 @@ public class MainActivity extends AppCompatActivity
 
     if (id == R.id.nav_lineup) {
       fragment = LineUpFragment.newInstance();
+      getSupportActionBar().setTitle("LineUp");
     } else if (id == R.id.nav_foodtruck) {
       fragment = FoodTruckFragment.newInstance();
+      getSupportActionBar().setTitle("FoodTrucks");
     } else if (id == R.id.nav_turismo) {
       fragment = SighteeingFragment.newInstance();
+      getSupportActionBar().setTitle("Turismo");
     }else if (id == R.id.nav_passeio) {
       fragment = TurismFragment.newInstance();
+      getSupportActionBar().setTitle("Passeios");
     }else if (id == R.id.nav_servicos) {
       fragment = CategoryFragment.newInstance();
+      getSupportActionBar().setTitle("Serviços");
     }
 
     if(fragment != null){
