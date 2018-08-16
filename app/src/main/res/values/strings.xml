@@ -4,6 +4,8 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Realização</string>
     <string name="title_activity_line_up">LineUpActivity</string>
+    <string name="toledo">
+Toledo é um município brasileiro do Estado de Minas Gerais, na microrregião de Pouso Alegre. Localiza-se a uma latitude 22º44'35" sul e a uma longitude 46º22'19" oeste, estando a uma altitude de 1128 metros. Sua população, segundo o Censo Demográfico efetuado pelo IBGE em 2010, é de 5.761 habitantes. Possui uma área de 136,133 km². A densidade demográfica é de 42,32 hab/km².</string>
 </resources>

@@ -46,6 +46,7 @@ public class FoodTruckAdapter extends RecyclerView.Adapter<FoodTruckAdapter.View
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         FoodTruck foodTruck = foodTruckList.get(position);
         holder.txtFoodTruckName.setText(foodTruck.getName());
+        holder.txtDesc.setText(foodTruck.getDescription());
     }
 
     @Override
@@ -56,11 +57,13 @@ public class FoodTruckAdapter extends RecyclerView.Adapter<FoodTruckAdapter.View
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView txtFoodTruckName;
+        private TextView txtDesc;
+
 
         public ViewHolder(View itemView) {
             super(itemView);
             txtFoodTruckName = (TextView) itemView.findViewById(R.id.text_foodtruck);
-
+            txtDesc = (TextView) itemView.findViewById(R.id.text_foodtruck_desc);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

@@ -22,6 +22,7 @@ public class DetailsFragment extends Fragment {
     private ProgressBar progressBar;
     private String latitude;
     private String longitude;
+    private String placeLabel;
 
     public static DetailsFragment newInstance(){
         return new DetailsFragment();
@@ -41,13 +42,14 @@ public class DetailsFragment extends Fragment {
         Button btnDetail = (Button)rootView.findViewById(R.id.btn_detail);
         ImageView imageView = (ImageView) rootView.findViewById(R.id.imageDetail);
 
-        txtName.setText(getArguments().getString("name"));
+        placeLabel = getArguments().getString("name");
+        txtName.setText(placeLabel);
         txtDescription.setText(getArguments().getString("description"));
         txtAddress.setText(getArguments().getString("address"));
 
         progressBar = new ProgressBar(getContext());
         progressBar.setVisibility(View.VISIBLE);
-        Picasso.with(getContext()).load(getArguments().getString("imageUrl")).into(imageView, new com.squareup.picasso.Callback(){
+        Picasso.with(getContext()).load(getArguments().getString("imageUrl")).centerCrop().resize(500,500).into(imageView, new com.squareup.picasso.Callback(){
             @Override
             public void onSuccess() {
                 if (progressBar != null) {
@@ -70,7 +72,7 @@ public class DetailsFragment extends Fragment {
         return new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri gmmIntentUri = Uri.parse("geo:"+ latitude+","+longitude+"?z=zoom");
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q="+ latitude+","+longitude+"(" + placeLabel +")");
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 if (mapIntent.resolveActivity(getActivity().getPackageManager()) != null) {

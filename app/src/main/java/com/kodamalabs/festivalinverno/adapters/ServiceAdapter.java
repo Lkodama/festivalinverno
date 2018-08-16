@@ -11,6 +11,8 @@ import android.widget.TextView;
 import com.kodamalabs.festivalinverno.R;
 import com.kodamalabs.festivalinverno.models.Services;
 
+import org.w3c.dom.Text;
+
 import java.util.List;
 
 public class ServiceAdapter extends RecyclerView.Adapter<ServiceAdapter.ViewHolder>{
@@ -46,6 +48,7 @@ public class ServiceAdapter extends RecyclerView.Adapter<ServiceAdapter.ViewHold
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Services service = servicesList.get(position);
         holder.txtService.setText(service.getName());
+        holder.txtDesc.setText(service.getDescription());
     }
 
     @Override
@@ -56,11 +59,12 @@ public class ServiceAdapter extends RecyclerView.Adapter<ServiceAdapter.ViewHold
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView txtService;
+        private TextView txtDesc;
 
         public ViewHolder(View itemView) {
             super(itemView);
             txtService = (TextView) itemView.findViewById(R.id.text_service);
-
+            txtDesc = (TextView) itemView.findViewById(R.id.text_service_desc);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

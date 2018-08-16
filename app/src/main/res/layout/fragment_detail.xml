@@ -19,6 +19,7 @@
                android:textAlignment="center"
         android:id="@+id/txt_detail_description"
               android:fontFamily="sans-serif-thin"
+        android:textStyle="bold"
         />
     <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
                android:textAlignment="center"

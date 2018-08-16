@@ -12,6 +12,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -19,6 +20,7 @@ import com.kodamalabs.festivalinverno.fragments.CategoryFragment;
 import com.kodamalabs.festivalinverno.fragments.FoodTruckFragment;
 import com.kodamalabs.festivalinverno.fragments.LineUpFragment;
 import com.kodamalabs.festivalinverno.fragments.SighteeingFragment;
+import com.kodamalabs.festivalinverno.fragments.TownFragment;
 import com.kodamalabs.festivalinverno.fragments.TurismFragment;
 import com.kodamalabs.festivalinverno.mappers.FoodTruckMapper;
 
@@ -38,7 +40,9 @@ public class MainActivity extends AppCompatActivity
     ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
         this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
     drawer.setDrawerListener(toggle);
+    drawer.openDrawer(Gravity.LEFT);
     toggle.syncState();
+    getSupportActionBar().setTitle("LineUp");
 
     NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
     navigationView.setNavigationItemSelectedListener(this);
@@ -72,6 +76,8 @@ public class MainActivity extends AppCompatActivity
 
     //noinspection SimplifiableIfStatement
     if (id == R.id.action_settings) {
+      getSupportActionBar().setTitle("Realização");
+      refreshScreen(TownFragment.newInstance());
       return true;
     }
 

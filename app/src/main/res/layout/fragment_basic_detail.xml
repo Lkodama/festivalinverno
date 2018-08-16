@@ -17,6 +17,7 @@
     <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
         android:textAlignment="center"
         android:fontFamily="sans-serif-thin"
+        android:textStyle="bold"
         android:id="@+id/txtDescription"
         android:textSize="15sp"
         android:layout_marginTop="10dp"/>

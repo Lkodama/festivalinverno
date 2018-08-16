@@ -30,6 +30,7 @@
                 android:layout_height="match_parent"
                 android:textColor="#FFFFFF"
                 android:text="24/08"
+                android:textStyle="bold"
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:layout_weight="1"/>

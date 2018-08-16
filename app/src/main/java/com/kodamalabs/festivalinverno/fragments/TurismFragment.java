@@ -24,7 +24,7 @@ import java.util.List;
 public class TurismFragment extends Fragment {
 
     private ProgressBar progressBar;
-    private List<String> listImagesUrl = Arrays.asList("https://i.imgur.com/xMkRuHp.jpg","https://i.imgur.com/xMkRuHp.jpg");
+    private List<String> listImagesUrl = Arrays.asList("https://i.imgur.com/lXm2Bui.jpg","https://i.imgur.com/xMkRuHp.jpg");
 
     public static TurismFragment newInstance(){
         return new TurismFragment();
@@ -50,7 +50,7 @@ public class TurismFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel:+5511974121583"));
+                intent.setData(Uri.parse("tel:+553597684030"));
                 startActivity(intent);
             }
         };
@@ -63,7 +63,7 @@ public class TurismFragment extends Fragment {
             public void setImageForPosition(int position, ImageView imageView) {
                 progressBar = new ProgressBar(getContext());
                 progressBar.setVisibility(View.VISIBLE);
-                Picasso.with(getContext()).load(listImagesUrl.get(position)).placeholder(R.drawable.icon).into(imageView, new com.squareup.picasso.Callback(){
+                Picasso.with(getContext()).load(listImagesUrl.get(position)).placeholder(R.mipmap.ic_launcher).centerCrop().resize(800,900).into(imageView, new com.squareup.picasso.Callback(){
                     @Override
                     public void onSuccess() {
                         if (progressBar != null) {
